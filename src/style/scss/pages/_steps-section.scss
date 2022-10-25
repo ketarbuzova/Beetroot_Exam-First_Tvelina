@@ -1,0 +1,82 @@
+.steps-section {
+    background-color: $dark-gray;
+
+    .container {
+        padding: 60px 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+
+        @include media('>=768px') {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+        }  
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0;
+
+        @include media('>=768px') {
+            padding: 0;
+        }  
+
+        /*
+        &::nth-child(2) {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                border-top: 1px dashed $white;
+                width: 376px;
+                height: 69px;
+                border-radius: 69px 69px 0px 0px;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+    
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }*/
+        }
+    }
+
+    .icon-holder {
+        padding-bottom: 20px;
+    }
+            
+    i {
+        font-size: 64px;
+
+        &.icon-search {
+            color: $accent;
+        }
+
+        &.icon-check-circle {
+            color: $red;
+        }
+
+        &.icon-thumbs-up {
+            color: $blue;
+        }
+    }
+}

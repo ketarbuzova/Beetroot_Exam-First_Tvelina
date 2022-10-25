@@ -1,0 +1,42 @@
+.footer {
+    background-color: $black;
+
+    .container {
+        display: flex;
+        padding: 40px 0;
+        align-items: center;
+        flex-direction: column;
+
+        @include media('>=768px') {
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        .logo-holder {
+            padding-bottom: 8px;
+        }
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        .social-holder {
+
+            a {
+                padding-right: 15px;
+            }
+             
+            i {
+                @include animate(color);
+
+                font-size: 32px;
+                color: $white;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: $base-font-size;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: $white;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-family;
+}
+
+h2 {
+    margin: 0 0 19px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    font-family: $title-font-family;
+}
+
+h3 {
+    margin: 0 0 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.pseudo-title {
+    margin: 0 0 19px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1140px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.btn {
+    @include animate(all, 0.2s);
+
+    display: block;
+    position: relative;
+    padding: 20px 32px;
+    max-width: 213px;
+    width: 100%;
+    background-color: $accent;
+    border-style: none;
+    overflow: hidden;
+
+    &::before {
+        @include animate(all, 0.4s);
+
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 150%;
+        background-color: $accent-darker;
+        z-index: 1;
+        transform: translateX(-235px) skewX(45deg);
+    
+        &:hover,
+        &:focus {
+            transform: translateX(-10px) skewX(45deg);
+        }  
+    } 
+
+    span {
+        font-family: $title-font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        position: relative;
+        z-index: 2;
+    }
+    
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+
+    @include media('>=768px') {
+        display: inline-block;
+    }  
+}
