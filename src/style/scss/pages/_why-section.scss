@@ -4,13 +4,14 @@
     background-position: 50% 50%;
     min-height: 630px;
     max-width: 100%;
+    padding: 60px 0;
 
     @include media('>=768px') {
         flex-direction: column;
+        padding: 60px 0;
     }
 
     .container {
-        padding: 60px 0;
         background-color: unset;
     }
 }

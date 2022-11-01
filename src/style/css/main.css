@@ -413,10 +413,7 @@ li {
   background-position: 50% 50%;
   min-height: 862px;
   max-width: 100%;
-}
-.search-section .container {
   padding: 295px 0 120px;
-  background-color: unset;
 }
 
 .search-section-wrapper {
@@ -470,14 +467,12 @@ li {
   display: flex;
   border-style: none;
   background-color: #fff;
-  width: 100%;
-  min-width: 647px;
+  max-width: 540px;
   z-index: 1;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .search {
-    max-width: 647px;
-    width: 60%;
+    width: 647px;
   }
 }
 .search input {
@@ -532,6 +527,7 @@ li {
   background-position: 50% 50%;
   min-height: 630px;
   max-width: 100%;
+  padding: 60px 0;
 }
 @media (min-width: 768px) {
   .why-section {
@@ -539,10 +535,10 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 60px 0;
   }
 }
 .why-section .container {
-  padding: 60px 0;
   background-color: unset;
 }
 
@@ -616,11 +612,9 @@ li {
 
 .steps-section {
   background-color: #333;
-}
-.steps-section .container {
   padding: 60px 0;
 }
-.steps-section ul {
+.steps-section .steps-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -638,9 +632,10 @@ li {
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
+  position: relative;
 }
 @media (min-width: 768px) {
-  .steps-section ul {
+  .steps-section .steps-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -652,9 +647,10 @@ li {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    position: relative;
   }
 }
-.steps-section ul li {
+.steps-section .steps-list .steps-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,36 +662,28 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 0;
-  /*
-  &::nth-child(2) {
-      position: relative;
-
-      &::before,
-      &::after {
-          content: '';
-          border-top: 1px dashed $white;
-          width: 376px;
-          height: 69px;
-          border-radius: 69px 69px 0px 0px;
-
-          &::before {
-              position: absolute;
-              top: 0;
-              left: 0;
-          }
-
-          &::after {
-              position: absolute;
-              top: 0;
-              right: 0;
-          }
-      }
-  }*/
+  position: relative;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .steps-section ul li {
+  .steps-section .steps-list .steps-item {
     padding: 0;
   }
+}
+.steps-section .steps-list .steps-item:after {
+  position: absolute;
+  content: "";
+  background-image: url(/src/img/line-stroke.svg);
+  position: absolute;
+  top: 35px;
+  left: 142px;
+  height: 48px;
+  width: 304px;
+  background-position: -20px 0;
+  color: antiquewhite;
+}
+.steps-section .steps-list .steps-item:last-of-type:after {
+  content: none;
 }
 .steps-section .icon-holder {
   padding-bottom: 20px;
@@ -719,9 +707,9 @@ li {
   background-position: 50% 50%;
   min-height: 712px;
   max-width: 100%;
+  padding: 220px 0 120px;
 }
 .booking-section .container {
-  padding: 120px 0 60px;
   background-color: unset;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -734,47 +722,16 @@ li {
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
-    padding: 220px 0 120px;
   }
 }
 
 .booking-content {
   background-color: rgba(35, 35, 35, 0.9);
   padding: 44px 32px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 540px;
 }
-@media (min-width: 768px) {
-  .booking-content {
-    width: 550px;
-    height: auto;
-    padding: 44px 32px;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: start;
-  }
-}
-@media (min-width: 768px) {
-  .booking-content.mountain-theme {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
+.booking-content.right-content {
+  margin-left: auto;
 }
 .booking-content .text-holder {
   padding-bottom: 24px;
@@ -789,9 +746,9 @@ li {
   background-position: 50% 50%;
   min-height: 736px;
   max-width: 100%;
+  padding: 120px 0 180px;
 }
 .blockquote-section .container {
-  padding: 60px 0 90px;
   background-color: unset;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -804,7 +761,6 @@ li {
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
-    padding: 120px 0 180px;
   }
 }
 .blockquote-section .container h2 {
@@ -905,8 +861,13 @@ li {
 .footer .container p {
   padding-bottom: 20px;
 }
-.footer .container .social-holder a {
-  padding-right: 15px;
+.footer .container .social-holder ul {
+  padding: 0;
+  margin: 0;
+}
+.footer .container .social-holder li {
+  display: inline;
+  padding: 0 15px;
 }
 .footer .container .social-holder i {
   -webkit-transition: color 0.3s ease;

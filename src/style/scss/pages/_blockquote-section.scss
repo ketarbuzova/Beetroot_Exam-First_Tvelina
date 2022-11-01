@@ -4,16 +4,15 @@
     background-position: 50% 50%;
     min-height: 736px;
     max-width: 100%;
+    padding: 120px 0 180px;
 
     .container {
-        padding: 60px 0 90px;
         background-color: unset;
         align-items: center;
 
         @include media('>=768px') {
             flex-direction: column;
             height: auto;
-            padding: 120px 0 180px;
         }
 
         h2 {

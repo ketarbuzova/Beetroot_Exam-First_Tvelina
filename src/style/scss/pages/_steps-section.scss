@@ -1,11 +1,8 @@
 .steps-section {
     background-color: $dark-gray;
+    padding: 60px 0;
 
-    .container {
-        padding: 60px 0;
-    }
-
-    ul {
+    .steps-list {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -14,49 +11,44 @@
         margin: 0 auto;
         padding: 0;
         list-style-type: none;
+        position: relative;
 
         @include media('>=768px') {
             display: flex;
             align-items: center;
             flex-direction: row;
             width: 100%;
-        }  
-
-    li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 60px 0;
-
-        @include media('>=768px') {
-            padding: 0;
-        }  
-
-        /*
-        &::nth-child(2) {
             position: relative;
+        }  
 
-            &::before,
-            &::after {
+        .steps-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0;
+            position: relative;
+            text-align: center;
+
+            @include media('>=768px') {
+                padding: 0;
+            }  
+
+            &:after {
+                position: absolute;
                 content: '';
-                border-top: 1px dashed $white;
-                width: 376px;
-                height: 69px;
-                border-radius: 69px 69px 0px 0px;
-
-                &::before {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-    
-                &::after {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                }
+                background-image: url(/src/img/line-stroke.svg);
+                position: absolute;
+                top: 35px;
+                left: 142px;
+                height: 48px;
+                width: 304px;
+                background-position: -20px 0;
+                color: antiquewhite;
             }
-        }*/
+    
+            &:last-of-type:after {
+                content: none;
+            }
         }
     }
 

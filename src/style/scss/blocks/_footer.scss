@@ -22,9 +22,14 @@
         }
 
         .social-holder {
+            ul {
+                padding: 0;
+                margin: 0;
+            }
 
-            a {
-                padding-right: 15px;
+            li {
+                display: inline;
+                padding: 0 15px;
             }
              
             i {
