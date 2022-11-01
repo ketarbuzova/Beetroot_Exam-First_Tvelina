@@ -140,6 +140,14 @@ h3 {
   text-transform: uppercase;
 }
 
+.steps-title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: capitalize;
+  font-family: "Aleo";
+}
+
 .pseudo-title {
   margin: 0 0 19px;
   font-weight: 300;
@@ -218,14 +226,12 @@ li {
 }
 
 .header {
-  min-height: 84px;
   background-color: #5373FD;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 22px 0;
-  width: 100%;
   background-color: #5373FD;
   z-index: 3;
 }
@@ -411,9 +417,8 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 862px;
-  max-width: 100%;
   padding: 295px 0 120px;
+  margin-top: 64px;
 }
 
 .search-section-wrapper {
@@ -525,8 +530,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 630px;
-  max-width: 100%;
   padding: 60px 0;
 }
 @media (min-width: 768px) {
@@ -612,7 +615,7 @@ li {
 
 .steps-section {
   background-color: #333;
-  padding: 60px 0;
+  padding: 122px 0 60px 0;
 }
 .steps-section .steps-list {
   display: -webkit-box;
@@ -625,14 +628,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  position: relative;
 }
 @media (min-width: 768px) {
   .steps-section .steps-list {
@@ -646,8 +644,9 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 100%;
-    position: relative;
   }
 }
 .steps-section .steps-list .steps-item {
@@ -669,21 +668,20 @@ li {
   .steps-section .steps-list .steps-item {
     padding: 0;
   }
-}
-.steps-section .steps-list .steps-item:after {
-  position: absolute;
-  content: "";
-  background-image: url(/src/img/line-stroke.svg);
-  position: absolute;
-  top: 35px;
-  left: 142px;
-  height: 48px;
-  width: 304px;
-  background-position: -20px 0;
-  color: antiquewhite;
-}
-.steps-section .steps-list .steps-item:last-of-type:after {
-  content: none;
+  .steps-section .steps-list .steps-item:after {
+    content: "";
+    position: absolute;
+    border-top: 1px dashed #fff;
+    border-radius: 188px 188px 0px 0px/70px 70px 0px 0px;
+    opacity: 0.5;
+    top: -35px;
+    left: 110px;
+    height: 70px;
+    width: 376px;
+  }
+  .steps-section .steps-list .steps-item:last-of-type:after {
+    content: none;
+  }
 }
 .steps-section .icon-holder {
   padding-bottom: 20px;
@@ -705,8 +703,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 712px;
-  max-width: 100%;
   padding: 220px 0 120px;
 }
 .booking-section .container {
@@ -744,8 +740,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 736px;
-  max-width: 100%;
   padding: 120px 0 180px;
 }
 .blockquote-section .container {
