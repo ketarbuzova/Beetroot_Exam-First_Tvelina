@@ -450,6 +450,16 @@ li {
   padding: 295px 0 120px;
   margin-top: 64px;
 }
+@media (min-width: 768px) {
+  .search-section {
+    margin-top: 126px;
+  }
+}
+@media (min-width: 1024px) {
+  .search-section {
+    margin-top: 83px;
+  }
+}
 
 .search-section-wrapper {
   display: -webkit-box;
@@ -672,7 +682,7 @@ li {
   padding: 0;
   list-style-type: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .steps-section .steps-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -704,7 +714,7 @@ li {
   position: relative;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .steps-section .steps-list .steps-item {
     padding: 0;
   }

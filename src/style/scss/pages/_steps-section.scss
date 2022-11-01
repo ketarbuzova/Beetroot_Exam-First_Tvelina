@@ -10,7 +10,7 @@
         padding: 0;
         list-style-type: none;
 
-        @include media('>=768px') {
+        @include media('>=1024px') {
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -26,7 +26,7 @@
             position: relative;
             text-align: center;
 
-            @include media('>=768px') {
+            @include media('>=1024px') {
                 padding: 0;
 
                 &:after {
