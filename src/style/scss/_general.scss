@@ -84,7 +84,7 @@ li {
     border-style: none;
     overflow: hidden;
 
-    &::before {
+    &:before {
         @include animate(all, 0.4s);
 
         content: '';
@@ -96,7 +96,7 @@ li {
         background-color: $accent-darker;
         z-index: 1;
         transform: translateX(-235px) skewX(45deg);
-    
+
         &:hover,
         &:focus {
             transform: translateX(-10px) skewX(45deg);
@@ -115,7 +115,6 @@ li {
         position: relative;
         z-index: 2;
     }
-    
 }
 
 .img {

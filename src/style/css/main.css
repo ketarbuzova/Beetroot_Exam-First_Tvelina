@@ -184,7 +184,7 @@ li {
   border-style: none;
   overflow: hidden;
 }
-.btn::before {
+.btn:before {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   content: "";
@@ -198,7 +198,7 @@ li {
   -webkit-transform: translateX(-235px) skewX(45deg);
           transform: translateX(-235px) skewX(45deg);
 }
-.btn::before:hover, .btn::before:focus {
+.btn:before:hover, .btn:before:focus {
   -webkit-transform: translateX(-10px) skewX(45deg);
           transform: translateX(-10px) skewX(45deg);
 }
@@ -452,7 +452,7 @@ li {
 }
 @media (min-width: 768px) {
   .search-section {
-    margin-top: 126px;
+    margin-top: 83px;
   }
 }
 @media (min-width: 1024px) {
@@ -572,7 +572,7 @@ li {
   background-position: 50% 50%;
   padding: 60px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .why-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -585,22 +585,21 @@ li {
   background-color: unset;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  width: 100%;
+@media (min-width: 1024px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 .row h2 {
   padding-top: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 10248px) {
   .row h2 {
     padding-bottom: 5px;
   }
@@ -608,26 +607,40 @@ li {
 .row .text-holder {
   padding-bottom: 32px;
 }
-.row .col {
-  width: 100%;
-}
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .row .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 50%;
   }
 }
 .row .col:last-child {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 0 auto;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .row .col:last-child {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
     margin: 0 auto;
     width: 100%;
     max-width: 550px;
@@ -636,8 +649,15 @@ li {
 
 .image-holder {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .image-holder {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -654,13 +674,16 @@ li {
     width: 100%;
   }
 }
-.image-holder:nth-child(1) {
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .image-holder:nth-child(1) {
-    margin: 0 0 16px -65px;
+@media (min-width: 1024px) {
+  .image-holder .img-left {
+    margin: 0 110px 16px;
   }
+}
+.image-holder .img-right {
+  margin: 0 0 0 24px;
+}
+.image-holder img {
+  max-width: 95%;
 }
 
 .steps-section {
@@ -713,6 +736,7 @@ li {
   padding: 60px 0;
   position: relative;
   text-align: center;
+  z-index: 0;
 }
 @media (min-width: 1024px) {
   .steps-section .steps-list .steps-item {
@@ -722,12 +746,13 @@ li {
     content: "";
     position: absolute;
     border-top: 1px dashed #fff;
-    border-radius: 188px 188px 0px 0px/70px 70px 0px 0px;
+    border-radius: 100%;
+    height: calc(70% + 42px);
+    width: 270px;
     opacity: 0.5;
-    top: -35px;
-    left: 110px;
-    height: 70px;
-    width: 376px;
+    top: -60px;
+    left: 165px;
+    z-index: -1;
   }
   .steps-section .steps-list .steps-item:last-of-type:after {
     content: none;

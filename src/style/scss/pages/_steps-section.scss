@@ -25,6 +25,7 @@
             padding: 60px 0;
             position: relative;
             text-align: center;
+            z-index: 0;  
 
             @include media('>=1024px') {
                 padding: 0;
@@ -33,12 +34,13 @@
                     content: '';
                     position: absolute;
                     border-top: 1px dashed $white;
-                    border-radius: 188px 188px 0px 0px / 70px 70px 0px 0px;
+                    border-radius: 100%;
+                    height: calc(70% - -42px);
+                    width: 270px;
                     opacity: 0.5;
-                    top: -35px;
-                    left: 110px;
-                    height: 70px;
-                    width: 376px;
+                    top: -60px;
+                    left: 165px;
+                    z-index: -1;
                 }
         
                 &:last-of-type:after {
