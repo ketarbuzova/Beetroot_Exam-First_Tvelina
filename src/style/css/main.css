@@ -141,6 +141,7 @@ h3 {
 }
 
 .steps-title {
+  margin: 0 0 19px;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -184,7 +185,7 @@ li {
   border-style: none;
   overflow: hidden;
 }
-.btn:before {
+.btn::before {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   content: "";
@@ -198,7 +199,7 @@ li {
   -webkit-transform: translateX(-235px) skewX(45deg);
           transform: translateX(-235px) skewX(45deg);
 }
-.btn:before:hover, .btn:before:focus {
+.btn::before:hover, .btn::before:focus {
   -webkit-transform: translateX(-10px) skewX(45deg);
           transform: translateX(-10px) skewX(45deg);
 }
